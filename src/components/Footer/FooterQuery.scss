@@ -1,0 +1,31 @@
+@media screen and (max-width: 850px) {
+  .__sweven {
+    &_footer {
+      &--description {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .__sweven {
+    &_footer {
+      margin: 0;
+      padding: 1rem 0.5rem;
+
+      &--description {
+        div {
+          margin: 0;
+          padding: 0;
+
+          &-lists {
+            span {
+              width: 12rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

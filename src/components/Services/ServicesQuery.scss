@@ -1,0 +1,126 @@
+@media screen and (max-width: "1024px") {
+  .__sweven_services {
+    &-main {
+      background-size: 25% auto, 40% 100%;
+
+      &--description {
+        &__body {
+          max-width: 30rem !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "875px") {
+  .__sweven_services {
+    &-list {
+      &--wrapper {
+        &__service {
+          flex-direction: column !important;
+          padding: 2rem !important;
+
+          &:nth-child(even) {
+            flex-direction: column !important;
+          }
+
+          &_description {
+            min-width: 80vw !important;
+          }
+
+          &_modal-extra--description {
+            flex-direction: column;
+
+            div {
+              max-width: 90vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "710px") {
+  .__sweven_services {
+    &-main {
+      background-image: url("../../images/lines.png");
+      background-size: 15% auto !important;
+      background-position: 0 25rem !important;
+      min-height: fit-content;
+      &--description {
+        padding: 10rem 0 !important;
+
+        &__heading {
+          display: flex;
+          div {
+            font-size: 4rem;
+            text-align: center;
+            margin: 0 auto;
+          }
+        }
+
+        &__body {
+          text-align: center;
+          max-width: 80vw !important;
+          margin: 3rem auto;
+        }
+
+        &__button {
+          display: flex !important;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "500px") {
+  .__sweven_services {
+    &-main {
+      background-position: 0 90% !important;
+      background-size: 28% auto !important;
+    }
+
+    &-list {
+      &--wrapper {
+        &__service {
+          &_image {
+            img {
+              width: 100%;
+            }
+          }
+
+          &_modal {
+            &-header {
+              font-size: 1.5rem !important;
+            }
+
+            &-quote {
+              &--text {
+                font-size: 1.5rem;
+              }
+            }
+
+            &-description {
+              font-size: 1.25rem;
+            }
+
+            &-extra {
+              &--title {
+                font-size: 1.5rem !important;
+              }
+
+              &--description {
+                padding: 1rem;
+                div {
+                  width: 100% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

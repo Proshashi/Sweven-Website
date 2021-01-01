@@ -1,0 +1,250 @@
+.__sweven_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 5rem;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transition: background ease-in-out 0.15s;
+
+  &-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--text {
+      font-size: 4rem;
+      font-family: "RobotoMono-Bold";
+      color: #3574fc;
+      animation: animateNavText ease-in-out 0.5s;
+      transition: all ease-in-out 0.5s;
+
+      @keyframes animateNavText {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+
+    img {
+      height: 6rem;
+      width: 6rem;
+    }
+    z-index: 9;
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+
+    &--item {
+      display: inline-block;
+      margin: 0 1rem;
+
+      & > a {
+        color: $textColor-dark;
+        font-family: "Roboto-Regular";
+        padding: 0.5rem 1rem;
+        border-radius: 1.5rem;
+        transition: all ease-in-out 0.2s;
+
+        &:hover {
+          background-color: $textColor-dark;
+          color: $textColor-light !important;
+        }
+      }
+
+      &__active {
+        background-color: $textColor-dark;
+        color: $textColor-light !important;
+      }
+    }
+  }
+
+  &-linksResponsive {
+    display: none;
+
+    input {
+      display: none;
+    }
+
+    input:checked + label span {
+      background: transparent;
+
+      &::before,
+      &::after {
+        margin: 0 0;
+        background-color: rgb(228, 7, 7);
+      }
+
+      &::before {
+        transform: rotateZ(135deg);
+      }
+
+      &::after {
+        transform: rotateZ(-135deg);
+      }
+    }
+
+    &--ham {
+      &__bars {
+        display: inline-block;
+        height: 0.2rem;
+        width: 3rem;
+        background: #182d4c;
+        position: relative;
+        transition: 0.25s ease-in-out all;
+        z-index: 9999;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 0.2rem;
+          width: 3rem;
+          background: #182d4c;
+          margin: 1rem 0;
+          transition: 0.25s ease-in-out all;
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &--links {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 1;
+      overflow: auto;
+      height: 100vh;
+      width: 100vw;
+      background-color: $textColor-dark2;
+      z-index: 1;
+      transition: 0.25s ease-in-out all;
+    }
+
+    &--item {
+      width: 10rem;
+      margin: 1rem;
+      transition: all ease-in-out 0.2s;
+      position: relative;
+      opacity: 0;
+      transition: all ease-in-out 0.5s;
+
+      &:first-child {
+        margin-top: auto;
+      }
+
+      &:last-child {
+        margin-bottom: auto !important;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0%;
+        background-color: $textColor-light;
+        z-index: -1;
+        transition: all ease-in-out 0.25s;
+      }
+
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
+
+      & > a {
+        color: $textColor-light;
+        font-family: "Roboto-Regular";
+        padding: 1rem 5rem 1rem 1rem;
+        transition: all ease-in-out 0.2s;
+        display: inline-block;
+        width: 10rem;
+
+        &:hover {
+          color: $textColor-dark !important;
+        }
+      }
+
+      &__active {
+        background-color: $textColor-light;
+        color: $textColor-dark !important;
+      }
+    }
+
+    .showMenu {
+      animation: showMenuAnimation ease-out 0.25s forwards;
+
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 100ms;
+        }
+      }
+
+      @keyframes showMenuAnimation {
+        0% {
+          margin-left: 20rem;
+          opacity: 0;
+        }
+
+        75% {
+          margin-left: -1rem;
+        }
+        100% {
+          margin-left: 0;
+          opacity: 1;
+        }
+      }
+    }
+
+    .hideMenu {
+      animation: hideMenuAnimation ease-out 0.05s forwards;
+
+      @for $i from 1 through 6 {
+        &:nth-child(3n + #{$i}) {
+          animation-delay: $i * 100ms;
+        }
+      }
+
+      @keyframes hideMenuAnimation {
+        0% {
+          margin-left: 0rem !important;
+          opacity: 1;
+        }
+
+        75% {
+          margin-left: -1rem !important;
+        }
+        100% {
+          margin-left: 10rem !important;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

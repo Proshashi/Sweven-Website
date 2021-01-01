@@ -1,0 +1,78 @@
+@media screen and (max-width: "1024px") {
+  .__sweven_contact {
+    &-main {
+      background-size: 40% 100%;
+    }
+  }
+}
+
+@media screen and (max-width: "815px") {
+  .__sweven_contact {
+    &-main {
+      background-image: url("../../images/linesRed.png");
+      background-position: left 22rem;
+      background-size: auto 40%;
+    }
+
+    &-info {
+      flex-direction: column-reverse;
+    }
+
+    &-information {
+      width: 80vw;
+    }
+
+    &-form {
+      background: #fff !important;
+      margin: -2rem 0 0 -2rem;
+      z-index: 1;
+      width: 70vw;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1rem;
+
+      form {
+        input {
+          width: 60vw !important;
+        }
+
+        textarea {
+          width: 60vw !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "710px") {
+  .__sweven_contact {
+    &-main {
+      &--description {
+        padding: 10rem 5rem !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "415px") {
+  .__sweven_contact {
+    &-main {
+      background-position: left 30rem;
+    }
+
+    &-information {
+      &--lists {
+        &__item {
+          &_detail {
+            flex-direction: column !important;
+
+            &-info {
+              width: 60vw !important;
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+}

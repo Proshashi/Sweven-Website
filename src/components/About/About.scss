@@ -1,0 +1,179 @@
+.__sweven_about {
+  &-main {
+    min-height: 100vh;
+    height: fit-content;
+    position: relative;
+    background-image: url("../../images/linesRed.png"),
+      url("../../images/software-development-light.png");
+    background-size: 10% auto, contain;
+    background-repeat: no-repeat;
+    background-position: 0 90%, right center;
+
+    &--description {
+      display: flex;
+      flex-direction: column;
+      padding: 15rem 15rem 5rem 5rem;
+
+      &__heading {
+        font-size: 5rem;
+        font-family: "Roboto-Bold";
+        padding: 0 0.3rem !important;
+
+        div {
+          display: inline-block;
+          color: $textColor-red;
+          line-height: 1;
+          background: linear-gradient(to right, #5150ad, #e6c573);
+
+          text-transform: uppercase;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      &__text {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        max-width: 40rem;
+        text-align: justify;
+        font-family: "RobotoMono-Regular";
+      }
+
+      &__button {
+        a {
+          font-size: 1.75rem;
+          margin: 2rem 0;
+          outline: none;
+          border: none;
+          border-radius: 10rem;
+          padding: 0.75rem 2rem;
+          font-family: "Roboto-Bold";
+          color: $textColor-light !important;
+          background: linear-gradient(to right, #4da0b0, #d39d38);
+          box-shadow: 0 0 0.8rem #734b6d;
+          cursor: pointer;
+          animation: buttonAnimate ease-in-out 2s infinite;
+          transition: all ease-in-out 0.5s !important;
+          display: inline-block;
+          color: $textColor-light !important;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
+          @keyframes buttonAnimate {
+            0% {
+              box-shadow: 0 0 0.8rem #734b6d;
+            }
+            50% {
+              box-shadow: 0 0 1.5rem #734b6d;
+            }
+
+            100% {
+              box-shadow: 0 0 0.8rem #734b6d;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-who,
+  &-what {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &--description {
+      font-size: 1.5rem;
+      text-align: center;
+      width: 80rem;
+      color: $textColor-green;
+    }
+  }
+
+  &-who {
+    &--cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 0 15rem;
+
+      &__card {
+        display: flex;
+        flex-direction: column;
+        max-width: 40rem;
+        margin: 2rem;
+
+        &_title {
+          font-size: 2rem;
+          font-family: "RobotoMono-Bold";
+          line-height: 1;
+          opacity: 0.7;
+          color: #d39d38;
+        }
+
+        &_description {
+          margin: 2rem 0;
+          font-size: 1.5rem;
+          opacity: 0.8;
+          color: #647db3;
+        }
+      }
+    }
+  }
+
+  &-what {
+    &--moto {
+      &__heading {
+        font-family: "Roboto-Bold";
+        font-size: 3rem;
+        text-align: center;
+        color: #d34a38;
+        position: relative;
+        opacity: 0.8;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 105%;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 0.2rem;
+          background-color: $textColor-red;
+          width: 5rem;
+        }
+      }
+
+      &__lists {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15rem;
+
+        &_item {
+          max-width: 40rem;
+          margin: 2rem;
+
+          &-title {
+            font-size: 2rem;
+            font-family: "RobotoMono-Bold";
+            color: #d39d38;
+          }
+
+          &-description {
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            color: $textColor-dark2;
+            opacity: 0.8;
+            color: #647db3;
+          }
+        }
+      }
+    }
+  }
+}

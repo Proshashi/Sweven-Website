@@ -1,0 +1,15 @@
+@media screen and (max-width: 825px) {
+  .__sweven_nav {
+    box-shadow: 0 0 0 #ccc !important;
+    padding-right: 3rem;
+    padding-left: 1rem;
+
+    &-links {
+      display: none;
+    }
+
+    &-linksResponsive {
+      display: block;
+    }
+  }
+}

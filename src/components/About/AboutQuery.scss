@@ -1,0 +1,129 @@
+@media screen and (max-width: "500px") {
+  .__sweven_about {
+    &-main {
+      min-height: 75vh !important;
+
+      &--description {
+        padding: 15rem 0 !important;
+        width: 100% !important;
+
+        &__text {
+          padding: 0 2rem;
+        }
+      }
+    }
+
+    &-what,
+    &-who {
+      &--description {
+        width: 80vw;
+        text-align: justify;
+      }
+    }
+
+    &-who {
+      &--cards {
+        padding: 0 2rem;
+        text-align: left;
+      }
+    }
+
+    &-what {
+      &--moto__lists {
+        padding: 0 2rem;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "710px") {
+  .__sweven_about {
+    &-main {
+      background-image: url("../../images/linesRed.png");
+      background-position: 0 95% !important;
+      background-size: 10rem auto !important;
+      min-height: fit-content;
+
+      animation: animate cubic-bezier(0.5, 0.7, 0.7, 1) 0.75s;
+
+      @keyframes animate {
+        0% {
+          background-position: 0 20rem;
+          opacity: 0;
+        }
+        80% {
+          background-position: 0 50rem;
+          opacity: 1;
+        }
+
+        100% {
+          background-position: 0 40rem;
+          opacity: 1;
+        }
+      }
+      &--description {
+        padding: 10rem 5rem;
+
+        &__heading {
+          min-width: fit-content;
+          margin: 0 auto;
+          div {
+            text-align: center;
+          }
+        }
+
+        &__text {
+          margin: 3rem auto;
+          min-width: fit-content;
+          text-align: center;
+        }
+
+        &__button {
+          display: flex;
+          text-align: center;
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "850px") {
+  .__sweven_about {
+    &-main {
+    }
+  }
+}
+
+@media screen and (max-width: "1050px") {
+  .__sweven_about {
+    &-main {
+      background-size: 15% auto, 40% 100%;
+    }
+  }
+}
+
+@media screen and (max-width: "1300px") {
+  .__sweven_about {
+    &-what,
+    &-who {
+      &--description {
+        width: 80vw !important;
+        text-align: justify;
+      }
+
+      &--cards {
+        width: calc(80vw + 2rem) !important;
+        padding: 0 2rem !important;
+      }
+
+      &--moto__lists {
+        width: calc(80vw + 2rem) !important;
+        padding: 0 2rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@media screen and (max-width: "1162px") {
+  .__sweven_products {
+    &-main {
+      background-size: 40% 80%, 15% auto !important;
+    }
+  }
+}
+
+@media screen and (max-width: "875px") {
+  .__sweven_products {
+    &-main {
+      background-size: 40% 60%, 15% auto !important;
+    }
+
+    &-products {
+      .rodal-dialog {
+        height: 80vh !important;
+        width: 80vw;
+      }
+      &--card {
+        &__popup {
+          flex-direction: column;
+          padding: 2rem;
+
+          &_description {
+            justify-content: center;
+
+            &-title {
+              width: 80vw;
+              text-align: center;
+              line-height: 1;
+              margin: 1rem 0;
+            }
+
+            &-body {
+              width: 70vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "710px") {
+  .__sweven_products {
+    &-main {
+      background-image: url("../../images/lines.png") !important;
+      background-size: 20% auto !important;
+      background-position: 0 90% !important;
+      min-height: fit-content !important;
+      &--content {
+        padding: 10rem 0 !important;
+
+        &__heading {
+          font-size: 4rem;
+          text-align: center;
+        }
+
+        &__text {
+          text-align: center;
+          width: 80vw !important;
+          margin: 3rem auto;
+        }
+
+        &__button {
+          color: $textColor-dark2;
+          font-size: 1.25rem;
+          display: flex;
+
+          a {
+            text-align: center;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    &-dm {
+      flex-direction: column;
+      padding-bottom: 2rem;
+      margin: 1rem 2rem;
+      border-radius: 1rem;
+      background: #fafafa;
+      box-shadow: 5px 5px 1rem #ccc;
+
+      &--image {
+        width: 80vw;
+
+        img {
+          width: 80vw;
+        }
+      }
+
+      &--description {
+        &__description {
+          width: 80vw;
+        }
+      }
+    }
+
+    &-projects {
+      &--lists {
+        &__item {
+          img {
+            width: 80vw;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "500px") {
+  .__sweven_products {
+    &-main {
+      background-position: 0 90% !important;
+      background-size: 25% auto !important;
+    }
+
+    &-dm {
+      &--image {
+        width: 70vw;
+        img {
+          width: 70vw;
+        }
+      }
+
+      &--flow {
+        img {
+          width: 70vw;
+        }
+      }
+    }
+
+    &-products {
+      &--card {
+        &__popup {
+          padding: 0 !important;
+
+          &_description {
+            &-title {
+              font-size: 2rem;
+              width: 70vw !important;
+            }
+
+            &-body {
+              font-size: 1.25rem;
+              width: 70vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

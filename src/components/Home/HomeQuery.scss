@@ -1,0 +1,211 @@
+@media screen and (max-width: "1300px") {
+  .__sweven_home {
+    &-main {
+      &::after {
+        background-size: cover, auto !important;
+        background-position: center left, 0 90%;
+      }
+
+      &--content {
+        // &__description {
+        //   text-align: left;
+        // }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "1100px") {
+  .__sweven_home {
+    &-services {
+      max-width: 70vw;
+
+      &--cards {
+        flex-direction: column;
+        overflow: hidden;
+
+        &__card {
+          flex-direction: row;
+          padding: 1rem;
+          flex-wrap: wrap;
+          align-items: center;
+
+          &_thumbnail {
+            margin-right: 5rem;
+          }
+
+          &_title {
+            text-align: left;
+            width: 20rem;
+          }
+        }
+      }
+
+      &--body {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "825px") {
+  .__sweven_home {
+    &-main {
+      &--content {
+        text-align: center;
+        padding: 15rem 0 5rem 0rem;
+
+        &__title {
+          max-width: 100%;
+        }
+
+        &__description {
+          text-align: center;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &-services {
+      margin-top: 4rem !important;
+
+      // &--title {
+      //   display: block !important;
+      // }
+    }
+  }
+}
+
+@media screen and (max-width: "610px") {
+  .__sweven_home {
+    &-main {
+      &--content {
+        &__title {
+          span {
+            &:first-child {
+              color: #fff;
+              font-size: 4rem;
+            }
+
+            &:last-child {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    &-services {
+      max-width: 85vw;
+      &--cards {
+        &__card {
+          flex-direction: column;
+
+          &_thumbnail {
+            margin-right: 0;
+          }
+
+          &_title {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "710px") {
+  .__sweven_home {
+    &-main {
+      &--content {
+        padding: 10rem 2rem !important;
+
+        &__title {
+        }
+
+        &__description {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "500px") {
+  .__sweven_sectionHeader {
+    font-size: 3rem;
+  }
+
+  .__sweven_home {
+    &-main {
+      min-height: 60rem;
+
+      &::after {
+        background-image: url("../../images/lines.png");
+        background-position: 0 35rem !important;
+        background-size: 50% auto !important;
+
+        animation: animate cubic-bezier(0.5, 0.7, 0.7, 1) 0.75s;
+
+        @keyframes animate {
+          0% {
+            background-position: 0 20rem;
+            opacity: 0;
+          }
+          80% {
+            background-position: 0 50rem;
+            opacity: 1;
+          }
+
+          100% {
+            background-position: 0 35rem;
+            opacity: 1;
+          }
+        }
+      }
+
+      &--content {
+        padding: 13rem 2rem 2rem 2rem;
+
+        &__title {
+          font-size: 4rem !important;
+
+          span {
+            &:last-child {
+              margin: 1rem 0;
+              font-size: 1.5rem;
+              letter-spacing: 5px;
+            }
+          }
+        }
+
+        &__description {
+          font-size: 1.75rem;
+          margin: 5rem 0;
+          // max-width: 32rem !important;
+        }
+      }
+    }
+
+    &-services {
+      &--body {
+        flex-direction: column;
+      }
+    }
+
+    &-clients {
+      &--cards {
+        text-align: center;
+
+        &__card {
+          margin: 2rem 0;
+
+          &_body {
+            width: 35rem;
+          }
+        }
+      }
+    }
+  }
+}

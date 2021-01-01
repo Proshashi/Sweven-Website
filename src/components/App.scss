@@ -1,0 +1,38 @@
+.__sweven {
+  overflow: hidden;
+
+  .rodal .rodal-mask {
+    opacity: 0.8 !important;
+    background: #000;
+  }
+}
+
+.rodal {
+  z-index: 999 !important;
+}
+
+.rodal-close {
+  &::after {
+    background-color: $textColor-light !important;
+    width: 4rem !important;
+  }
+
+  &::before {
+    background-color: $textColor-light !important;
+    width: 4rem !important;
+  }
+}
+
+.facebookIcon {
+  // color: #4267b2;
+  color: #ece9e9;
+}
+
+.instagramIcon {
+  // color: #fd1d1d;
+  color: #ece9e9;
+}
+.twitterIcon {
+  // color: #00acee;
+  color: #ece9e9;
+}
