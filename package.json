@@ -13,7 +13,7 @@
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.1.1",
     "emailjs-com": "^2.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-animated-slider": "^2.0.0",
     "react-anime": "^3.0.3",
